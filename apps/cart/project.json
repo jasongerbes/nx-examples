@@ -4,6 +4,30 @@
   "projectType": "application",
   "generators": {},
   "targets": {
+    "example": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "echo 'target:example'"
+      },
+      "dependsOn": [
+        {
+          "target": "target-from-project-json",
+          "projects": "self"
+        }
+      ]
+    },
+    "target-from-project-json": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "echo 'target:target-from-project-json'"
+      }
+    },
+    "target-from-nx-json": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "echo 'target:target-from-nx-json'"
+      }
+    },
     "build": {
       "executor": "@nrwl/web:webpack",
       "options": {

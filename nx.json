@@ -26,6 +26,12 @@
         "target": "build",
         "projects": "dependencies"
       }
+    ],
+    "example": [
+      {
+        "target": "target-from-nx-json",
+        "projects": "self"
+      }
     ]
   },
   "cli": {
